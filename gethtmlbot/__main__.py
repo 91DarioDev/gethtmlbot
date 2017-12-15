@@ -23,13 +23,6 @@ from telegram.ext import (
         Filters)
 
 
-if len(sys.argv) == 2:
-    BOT_TOKEN = sys.argv[1]
-else:
-	print("\n!WARNING!:\nadd the bot token as paramter when running the bot.\nExiting...")
-	sys.exit(1)
-
-
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -52,9 +45,15 @@ def send_plain_text(bot, update):
 
 
 def main():
+	if len(sys.argv) == 2:
+	    bot_token = sys.argv[1]
+	else:
+		print("\n!WARNING!:\nadd the bot token as paramter when running the bot.\nExiting...")
+		sys.exit(1)
+
     print("\nrunning...")
     # define the updater
-    updater = Updater(token=BOT_TOKEN)
+    updater = Updater(token=bot_token)
     
     # define the dispatcher
     dp = updater.dispatcher
