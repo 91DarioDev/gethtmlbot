@@ -46,7 +46,7 @@ def send_plain_text(bot, update):
         update.message.reply_text(update.message.text_html)
     else:
         text = "This is not a text message. Send here formatted html text messages and get back plain text messages"
-        update.message.reply_text(text)
+        update.message.reply_text(text, quote=True)
 
 
 def main():
