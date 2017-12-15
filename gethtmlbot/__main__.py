@@ -49,7 +49,7 @@ def main():
 	    bot_token = sys.argv[1]
 	else:
 		print("\n!WARNING!:\nadd the bot token as paramter when running the bot.\nExiting...")
-		sys.exit(1)
+		sys.exit()
 
     print("\nrunning...")
     # define the updater
