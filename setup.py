@@ -1,4 +1,4 @@
-# gethtmlbot - send formatted html text messages and get back plain text message
+# gethtmlbot - send formatted html text messages and get back plain text messages
 # Copyright (C) 2017  Dario 91DarioDev <dariomsn@hotmail.it> <github.com/91dariodev>
 #
 # gethtmlbot is free software: you can redistribute it and/or modify

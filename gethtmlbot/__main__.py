@@ -1,4 +1,4 @@
-# gethtmlbot - send formatted html text messages and get back plain text message
+# gethtmlbot - send formatted html text messages and get back plain text messages
 # Copyright (C) 2017  Dario 91DarioDev <dariomsn@hotmail.it> <github.com/91dariodev>
 #
 # gethtmlbot is free software: you can redistribute it and/or modify
@@ -33,23 +33,28 @@ def error(bot, update, error):
 
 
 def help_command(bot, update):
-	update.message.reply_text("send here formatted html text messages and get back plain text message")
+    text = (
+        "send here formatted html text messages and get back plain text messages.\n\n"
+        "This program is released under the of the AGPL-3.0 license. "
+        "<a href=\"https://github.com/91DarioDev/gethtmlbot\">View the source code</a>"
+    )
+    update.message.reply_text(text=text, parse_mode='HTML')
 
 
 def send_plain_text(bot, update):
-	if update.message.text:
-		update.message.reply_text(update.message.text_html)
-	else:
-		text = "This is not a text message. Send here formatted html text messages and get back plain text message"
-		update.message.reply_text(text)
+    if update.message.text:
+        update.message.reply_text(update.message.text_html)
+    else:
+        text = "This is not a text message. Send here formatted html text messages and get back plain text messages"
+        update.message.reply_text(text)
 
 
 def main():
-	if len(sys.argv) == 2:
-	    bot_token = sys.argv[1]
-	else:
-		print("\n!WARNING!:\nadd the bot token as paramter when running the bot.\nExiting...")
-		sys.exit()
+    if len(sys.argv) == 2:
+        bot_token = sys.argv[1]
+    else:
+        print("\n!WARNING!:\nadd the bot token as paramter when running the bot.\nExiting...")
+        sys.exit()
 
     print("\nrunning...")
     # define the updater
