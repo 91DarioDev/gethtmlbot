@@ -17,10 +17,10 @@
 import logging
 import sys
 from telegram.ext import (
-        Updater,
-        CommandHandler,
-        MessageHandler,
-        Filters)
+    Updater,
+    CommandHandler,
+    MessageHandler,
+    Filters)
 
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
