@@ -35,10 +35,10 @@ def error(bot, update, error):
 def help_command(bot, update):
     text = (
         "send here formatted html text messages and get back plain text messages.\n\n"
-        "This program is released under the of the AGPL-3.0 license. "
+        "This program is released under the terms of the AGPL-3.0 license. "
         "<a href=\"https://github.com/91DarioDev/gethtmlbot\">View the source code</a>"
     )
-    update.message.reply_text(text=text, parse_mode='HTML')
+    update.message.reply_text(text=text, parse_mode='HTML', disable_web_page_preview=True)
 
 
 def send_plain_text(bot, update):
