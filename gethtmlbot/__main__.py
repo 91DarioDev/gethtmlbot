@@ -16,6 +16,11 @@
 
 import logging
 import sys
+from telegram.ext import (
+        Updater,
+        CommandHandler,
+        MessageHandler,
+        Filters)
 
 
 if len(sys.argv) == 2:
