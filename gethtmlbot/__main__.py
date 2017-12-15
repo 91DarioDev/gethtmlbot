@@ -15,6 +15,14 @@
 # along with gethtmlbot.  If not, see <http://www.gnu.org/licenses/>.
 
 import logging
+import sys
+
+
+if len(sys.argv) == 2:
+    BOT_TOKEN = sys.argv[1]
+else:
+	print("\n!WARNING!:\nadd the bot token as paramter when running the bot.\nExiting...")
+
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
