@@ -13,3 +13,40 @@
 #
 # You should have received a copy of the GNU Affero General Public License
 # along with gethtmlbot.  If not, see <http://www.gnu.org/licenses/>.
+
+
+import setuptools
+
+
+setuptools.setup(
+
+    name="gethtmlbot",
+    version="1",
+
+    license="AGPL-3.0",
+
+    author="Dario 91DarioDev",
+    author_email="dariomsn@hotmail.it",
+
+    install_requires=[
+        "python-telegram-bot"
+    ],
+
+    packages=[
+        "gethtmlbot",
+    ],
+
+    entry_points={
+        "console_scripts": [
+            "gethtmlbot = gethtmlbot.__main__:main",
+        ],
+    },
+
+    include_package_data=True,
+    zip_safe=False,
+
+    classifiers=[
+        "Not on PyPI"
+    ],
+
+)
